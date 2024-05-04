@@ -126,6 +126,7 @@ int main()//menu principal
 		printf("\t 1 - Registrar nomes\n");//direciona a ação
 		printf("\t 2 - Consultar nomes\n");//direciona a ação
 		printf("\t 3 - Deletar nomes\n\n\n");//direciona a ação
+		printf("\t 4 - Sair do sistema\n\n");//direciona a ação
 		printf("Opção:\t");//fim do menu
 	
 		scanf("%d",&opcao);//armazenando a escolha do usuário
@@ -146,10 +147,15 @@ int main()//menu principal
 			deletar();//chamada de função
 			break;//pausa a função
 			
+			case 4://opção de ação
+			printf("Obrigado por utilizar nosso sistema!\n");//direciona a ação
+			return 0;//sucesso na execução do programa
+			break;//pausa a função
+			
 			default://opção de ação indisponível
 			printf("Opção não disponível no momento.\n\n");//direciona a ação
 			system("pause");//pausa o sistema
-			break;//pausa a aç~~ao
+			break;//pausa a ação
 			//fim menu	
 		}
 		
