@@ -112,52 +112,62 @@ int main()//menu principal
 {
 	int opcao=0;//definindo as variáveis
 	int laco=1;
+	char senhadigitada[10]="a";//variável principal da criação de uma senha
 	
-	for(laco=1;laco=1;)//variável de repetição
+	printf("### Cartório da EBAC ###\n\n");//direciona ação
+	printf("Login de administrador\n\nDigite a sua senha: ");//direciona ação
+	scanf("%s",senhadigitada);//armazena o daado
+	
+	if(senhadigitada[10]=="admin")//se a senha digitada corretamente
 	{
-		
-		system("cls");//limpa a tela
 	
 	
-		setlocale(LC_ALL, "Portuguese");//definindo a linguagem
-	
-		printf("### Cartório da EBAC ###\n\n");//início do menu
-		printf("Escolha a opção desejada no menu:\n\n");//direciona a ação
-		printf("\t 1 - Registrar nomes\n");//direciona a ação
-		printf("\t 2 - Consultar nomes\n");//direciona a ação
-		printf("\t 3 - Deletar nomes\n\n\n");//direciona a ação
-		printf("\t 4 - Sair do sistema\n\n");//direciona a ação
-		printf("Opção:\t");//fim do menu
-	
-		scanf("%d",&opcao);//armazenando a escolha do usuário
-	
-		system("cls");//limpa a tela
-		
-		switch(opcao)//escolha da ação
+		for(laco=1;laco=1;)//variável de repetição
 		{
-			case 1://opção de ação
-			registro();//() chamada de função
-			break;//pausa a função
-			
-			case 2://opção de ação
-			consulta();//chamada de função
-			break;//pausa a funçao
-			
-			case 3://opção de ação
-			deletar();//chamada de função
-			break;//pausa a função
-			
-			case 4://opção de ação
-			printf("Obrigado por utilizar nosso sistema!\n");//direciona a ação
-			return 0;//sucesso na execução do programa
-			break;//pausa a função
-			
-			default://opção de ação indisponível
-			printf("Opção não disponível no momento.\n\n");//direciona a ação
-			system("pause");//pausa o sistema
-			break;//pausa a ação
-			//fim menu	
-		}
+	
+			setlocale(LC_ALL, "Portuguese");//definindo a linguagem
+	
+			printf("### Cartório da EBAC ###\n\n");//início do menu
+			printf("Escolha a opção desejada no menu:\n\n");//direciona a ação
+			printf("\t 1 - Registrar nomes\n");//direciona a ação
+			printf("\t 2 - Consultar nomes\n");//direciona a ação
+			printf("\t 3 - Deletar nomes\n\n");//direciona a ação
+			printf("\t 4 - Sair do sistema\n\n");//direciona a ação
+			printf("Opção:\t");//fim do menu
+	
+			scanf("%d",&opcao);//armazenando a escolha do usuário
+	
+			system("cls");//limpa a tela
 		
+			switch(opcao)//escolha da ação
+			{
+				case 1://opção de ação
+				registro();//() chamada de função
+				break;//pausa a função
+			
+				case 2://opção de ação
+				consulta();//chamada de função
+				break;//pausa a funçao
+			
+				case 3://opção de ação
+				deletar();//chamada de função
+				break;//pausa a função
+			
+				case 4://opção de ação
+				printf("Obrigado por utilizar nosso sistema!\n");//direciona a ação
+				return 0;//sucesso na execução do programa
+				break;//pausa a função
+			
+				default://opção de ação indisponível
+				printf("Opção não disponível no momento.\n\n");//direciona a ação
+				system("pause");//pausa o sistema
+				break;//pausa a ação
+				//fim menu	
+			}
+		}
     }
+    
+    else//se não:
+    	printf("\n\nSenha incorreta");//direciona a ação
+    
 }
