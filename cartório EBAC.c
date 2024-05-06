@@ -113,15 +113,19 @@ int main()//menu principal
 	int opcao=0;//definindo as variáveis
 	int laco=1;
 	char senhadigitada[10]="a";//variável principal da criação de uma senha
+	int comparacao;
 	
 	printf("### Cartório da EBAC ###\n\n");//direciona ação
 	printf("Login de administrador\n\nDigite a sua senha: ");//direciona ação
 	scanf("%s",senhadigitada);//armazena o daado
 	
-	if(senhadigitada[10]=="admin")//se a senha digitada corretamente
+	comparacao = strcmp(senhadigitada, "admin");//definindo a int comparação
+	
+	if(comparacao == 0)//se a senha for digitada corretamente
 	{
 	
-	
+		system("cls");
+		
 		for(laco=1;laco=1;)//variável de repetição
 		{
 	
